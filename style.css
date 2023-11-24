@@ -1,0 +1,130 @@
+@font-face {
+    font-family: "ProximaNova";
+    src: url("../fonts/ProximaNova-Regular.otf");
+  }
+:root {
+    /* colors */
+    --primary-clr-orange: #F7A100;
+    --primary-clr-white: #FFFFFF;
+    --primary-clr-blue: #0071B3;
+    --primary-clr-black: #333333;
+   
+    --secundary-clr-brown: #53241B;
+    --secundary-clr-ltblue: #478BB3;
+    --secundary-clr-yellow: #F8C463;
+    --secundary-clr-green: #66BA96;
+    
+    --shades-clr-gray1: #EDEDED;
+    --shades-clr-gray2: #CCCCCC;
+    --shades-clr-gray3: #666666;
+    --shades-clr-black: #333333;
+
+    /* typography */
+    --fontfam-body: 'Proxima Nova Regular', sans-serif;
+    --fontfam-headings: 'Proxima Nova SemiBold', sans-serif;
+    --line-h-txt: 1.5;
+    --align-txt: center;
+
+    /* buttons */
+    --button-bg-clr-orange: #F7A100;
+    --button-bg-clr-blue: #0071B3;
+    --button-txt-clr-white: #FFFFFF;
+    --button-border-radius: 1em;
+
+    /* container child elementen */
+    --div-padd: 3em;
+}
+
+body{ 
+    background-color: var(--shades-clr-gray2);
+    font-family: var(--fontfam-body);
+}
+
+h1{
+    background-color: var(--primary-clr-orange);
+    font-family: var(--fontfam-headings);
+    padding: 1em;
+    border-radius: var(--button-border-radius);
+    text-align: var(--align-txt);
+}
+
+p{
+    text-align: var(--align-txt);
+    max-width: 810px;
+    margin: 0 auto;
+    hyphens: auto;
+    line-height: var(--line-h-txt);
+}
+    
+.card-container{
+ /* Stijlen voor alle divs binnen .card-container */
+    background-color: var(--primary-clr-orange);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    columns: 150px auto;
+    padding: 3em;
+}
+
+.card-container div{
+    text-align: var(--align-txt);
+    &:nth-child(1) {
+        /* Stijlen voor het eerste div-element */
+        background-color: var(--secundary-clr-ltblue);
+        padding: var(--div-padd);
+        border-radius: var(--button-border-radius);
+        color: var(--button-txt-clr-white);
+        
+}
+    &:nth-child(2) {
+        /* stijlen voor het tweede div-element */
+        background-color: var(--secundary-clr-brown);
+        padding: var(--div-padd);
+        border-radius: var(--button-border-radius);
+        color: var(--button-txt-clr-white);
+
+    }
+
+    &:nth-child(3) {
+        /* stijlen voor het derde div-element */
+        background-color: var(--secundary-clr-green);
+        padding: var(--div-padd);
+        border-radius: var(--button-border-radius);
+        color: var(--button-txt-clr-white);
+    }
+    
+}
+
+@media (max-width:768px){
+    .card-container{
+        grid-template-columns: repeat(2, 1fr);
+    }  
+}
+
+@media (max-width:480px){
+   .card-container {
+    grid-template-columns: 1fr;
+    }
+}
+
+.button-container{
+    background-color: var(--secundary-clr-green);
+    padding: var(--div-padd);
+}
+button.orange, .blue {
+    color: var(--button-txt-clr-white);
+    border-radius: var(--button-border-radius);
+    margin: 0 auto;
+    padding: 15px 50px;
+    font-size: 16px;
+    }
+button.orange {
+        background-color: var(--button-bg-clr-orange);
+    }
+    
+ button.blue {
+        background-color: var(--button-bg-clr-blue);
+    }
+
+
+
